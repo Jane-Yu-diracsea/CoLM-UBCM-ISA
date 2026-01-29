@@ -1,0 +1,52 @@
+# macOS
+.DS_Store
+
+# Python
+*.pyc
+__pycache__/
+
+# ========================
+# CoLM run: selective keep
+# ========================
+
+# site-level namelists (too many, not for repo)
+run/site_nml/
+run/**/bak/
+
+# logs & outputs
+run/**/logs/
+*.out
+*.log
+
+# Slurm scripts
+*.slurm
+
+
+# ========================
+# Build / compile
+# ========================
+*.o
+*.a
+.bld/
+lib/
+
+# ========================
+# Editor
+# ========================
+.vscode/
+
+# ========================
+# Figures / outputs
+# ========================
+pictures/
+
+# ========================
+# Large scientific data
+# ========================
+*.tif
+*.tiff
+*.hdf
+*.h5
+
+run/urb/logs/
+run/site_nml/logs/

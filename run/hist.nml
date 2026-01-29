@@ -1,0 +1,10 @@
+&nl_colm_history
+
+   ! ----- history -----
+   DEF_hist_vars%assim       = .true.
+   DEF_hist_vars%respc       = .true.
+   DEF_hist_vars%gpp         = .true.
+   DEF_hist_vars%ar          = .true.
+   DEF_hist_vars%hr          = .true.
+   DEF_hist_vars%albsoi       = .true.
+/

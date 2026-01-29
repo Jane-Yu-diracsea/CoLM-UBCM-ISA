@@ -1,0 +1,4 @@
+               Date     Time   Level Gridsize    Miss    Diff : S Z  Max_Absdiff Max_Reldiff : Parameter name
+     1 : 0000-00-00 00:00:00       0        1       0       1 : F F      0.26475     0.90379 : PCT_Tree   
+    15 : 0000-00-00 00:00:00       0        1       0       1 : F F      0.70350     0.93800 : WTROAD_PERV
+  2 of 35 records differ

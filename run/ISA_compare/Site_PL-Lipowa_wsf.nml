@@ -1,0 +1,111 @@
+&nl_colm
+
+ DEF_CASE_NAME = 'PL-Lipowa_WSF_hourly'
+
+ ! surface data from SITE.
+ SITE_fsitedata = '/stu02/yuxr24/data/singlepoint_urban/imperviousarea_test/WSF/PL-Lipowa_site_v1.nc'
+ ! path to surface database
+ DEF_dir_rawdata = '/tera12/yuanhua/data/CoLMrawdata/'
+ DEF_dir_runtime = '/tera12/yuanhua/data/CoLMruntime/'
+
+ ! true  : surface data from SITE
+ ! false : surface data is retrieved from database.
+ SITE_landtype             = 13
+ USE_SITE_landtype         = .true.
+ USE_SITE_lakedepth        = .false.
+ USE_SITE_soilreflectance  = .false.
+ USE_SITE_soilparameters   = .false.
+ USE_SITE_topography       = .false.
+ USE_SITE_urban_geometry   = .true.
+ USE_SITE_urban_ecology    = .true.
+ USE_SITE_urban_radiation  = .true.
+ USE_SITE_urban_thermal    = .false.
+ USE_SITE_urban_human = .true.
+ USE_SITE_ForcingReadAhead = .true.
+
+ DEF_simulation_time%greenwich     = .true.
+ DEF_simulation_time%start_year    = 1997
+ DEF_simulation_time%start_month   = 12
+ DEF_simulation_time%start_day     = 31
+ DEF_simulation_time%start_sec     = 82800
+ DEF_simulation_time%end_year      = 2012
+ DEF_simulation_time%end_month     = 12
+ DEF_simulation_time%end_day       = 31
+ DEF_simulation_time%end_sec       = 79200
+ DEF_simulation_time%spinup_year   = 2007
+ DEF_simulation_time%spinup_month  = 12
+ DEF_simulation_time%spinup_day    = 31
+ DEF_simulation_time%spinup_sec    = 82800
+ DEF_simulation_time%spinup_repeat = 0
+
+ DEF_simulation_time%timestep     = 3600.
+
+ DEF_dir_output = '/stu02/yuxr24/CoLM-UBCM-ISA/output/'
+ DEF_USE_WUEST  = .false.
+ 
+ !---- Urban options ----
+ ! urban type options
+ ! Options :
+ ! 1: NCAR Urban Classification, 3 urban type with Tall Building, High Density and Medium Density
+ ! 2: LCZ Classification, 10 urban type with LCZ 1-10
+ DEF_URBAN_type_scheme = 2
+
+ ! urban module options
+ DEF_URBAN_ONLY = .false.
+ DEF_URBAN_TREE = .true.
+ DEF_URBAN_WATER= .true.
+ DEF_URBAN_BEM  = .true.
+ DEF_URBAN_LUCY = .true.
+ DEF_USE_CANYON_HWR = .true.
+ ! -----------------------
+
+ ! Canopy DEF Interception scheme selection
+ DEF_Interception_scheme=1 !1:CoLM2014；2:CLM4.5; 3:CLM5; 4:Noah-MP; 5:MATSIRO; 6:VIC
+
+ ! ---- Hydrology module ----
+ DEF_USE_SUPERCOOL_WATER         = .false.
+ DEF_USE_VariablySaturatedFlow   = .false.
+ DEF_USE_PLANTHYDRAULICS         = .false.
+ ! --------------------------
+
+ ! ---- SNICAR ----
+ DEF_USE_SNICAR     = .false.
+ DEF_Aerosol_Readin = .true.
+ DEF_Aerosol_Clim   = .false.
+ ! ----------------
+
+ ! ---- Ozone MODULE ----
+ DEF_USE_OZONESTRESS = .false.
+ DEF_USE_OZONEDATA   = .false.
+ ! ----------------------
+
+ ! ---- Bedrock ----
+ DEF_USE_BEDROCK = .false.
+ ! -----------------
+
+ ! ---- Split Soil Snow ----
+ DEF_SPLIT_SOILSNOW = .false.
+ ! -------------------------
+
+ ! ---- Forcing Downscalling ----
+ DEF_USE_Forcing_Downscaling        = .false.
+ DEF_DS_precipitation_adjust_scheme = 'II'
+ DEF_DS_longwave_adjust_scheme      = 'II'
+ ! ------------------------------
+
+ ! ----- forcing -----
+ DEF_forcing_namelist = '/home/dongwz/github/master/CoLM202X/run/forcing/PL-Lipowa.nml'
+
+ ! ----- history -----
+ DEF_hist_lon_res = 1.
+ DEF_hist_lat_res = 1.
+ DEF_WRST_FREQ = 'YEARLY'   ! write restart file frequency: HOURLY/DAILY/MONTHLY/YEARLY
+ DEF_HIST_FREQ = 'HOURLY'    ! write history file frequency: HOURLY/DAILY/MONTHLY/YEARLY
+ DEF_HIST_groupby = 'YEAR'  ! history in one file: DAY/MONTH/YEAR
+ DEF_REST_CompressLevel = 0
+ DEF_HIST_CompressLevel = 0
+
+ !DEF_hist_vars_namelist = '/home/dongwz/github/master/CoLM202X/run/history.nml'
+ DEF_hist_vars_out_default = .true.
+
+/ 
