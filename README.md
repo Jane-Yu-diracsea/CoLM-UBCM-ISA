@@ -35,19 +35,14 @@ CoLM-UBCM-ISA/
 The original raw input datasets (**rawdata**) are not included in this repository due to their large volume and storage limitations.
 
 Users can obtain the rawdata from *** and place them in:
-
-------
 CoLM-UBCM-ISA/rawdata/
-------
+
 
 ## Runtime Data 
 The required Model runtime data (**runtime**) are not included in this repository due to their large size.
 
 Users should download the forcing data from *** and place them in:
-
-------
 CoLM-UBCM-ISA/runtime/
-------
 
 
 If you use alternative sources or your own datasets, please ensure that the data format and variable names are consistent with those expected by the preprocessing scripts.
