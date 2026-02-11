@@ -23,13 +23,13 @@ plt.rcParams.update({
 })
 
 # === 文件路径 ===
-file_gaia = "/stu02/yuxr24/CoLM202X_ISA/output/NL-Amsterdam_GAIA_hourly/history/NL-Amsterdam_GAIA_hourly_hist_2019.nc"
-file_gisa = "/stu02/yuxr24/CoLM202X_ISA/output/NL-Amsterdam_GISA_hourly/history/NL-Amsterdam_GISA_hourly_hist_2019.nc"
-file_gisd = "/stu02/yuxr24/CoLM202X_ISA/output/NL-Amsterdam_GISD_hourly/history/NL-Amsterdam_GISD_hourly_hist_2019.nc"
-file_wsf  = "/stu02/yuxr24/CoLM202X_ISA/output/NL-Amsterdam_WSF_hourly/history/NL-Amsterdam_WSF_hourly_hist_2019.nc"
-file_orig = "/stu02/yuxr24/CoLM202X_ISA/output/NL-Amsterdam_sitedata/history/NL-Amsterdam_sitedata_hist_2019.nc"
+file_gaia = "/stu02/yuxr24/CoLM-UBCM-ISA/output/NL-Amsterdam_GAIA_hourly/history/NL-Amsterdam_GAIA_hourly_hist_2019.nc"
+file_gisa = "/stu02/yuxr24/CoLM-UBCM-ISA/output/NL-Amsterdam_GISA_hourly/history/NL-Amsterdam_GISA_hourly_hist_2019.nc"
+file_gisd = "/stu02/yuxr24/CoLM-UBCM-ISA/output/NL-Amsterdam_GISD_hourly/history/NL-Amsterdam_GISD_hourly_hist_2019.nc"
+file_wsf  = "/stu02/yuxr24/CoLM-UBCM-ISA/output/NL-Amsterdam_WSF_hourly/history/NL-Amsterdam_WSF_hourly_hist_2019.nc"
+file_orig = "/stu02/yuxr24/CoLM-UBCM-ISA/output/NL-Amsterdam_sitedata/history/NL-Amsterdam_sitedata_hist_2019.nc"
 
-output_dir = "/stu02/yuxr24/CoLM202X_ISA/pictures/NL-Amsterdam_compare"
+output_dir = "/stu02/yuxr24/CoLM-UBCM-ISA/pictures/NL-Amsterdam_compare"
 os.makedirs(output_dir, exist_ok=True)
 
 datasets = {

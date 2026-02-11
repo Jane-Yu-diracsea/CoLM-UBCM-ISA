@@ -3,7 +3,7 @@
  DEF_CASE_NAME = 'SG-TelokKurau06_GISA_hourly'
 
  ! surface data from SITE.
- SITE_fsitedata = '/stu02/yuxr24/data/singlepoint_urban/imperviousarea_test/GISA/SG-TelokKurau06_site_v1.nc'
+ SITE_fsitedata = 'CoLM-UBCM-ISA/impervious_input_nml/GISA/SG-TelokKurau06_site_v1.nc'
  ! path to surface database
  DEF_dir_rawdata = '/tera12/yuanhua/data/CoLMrawdata/'
  DEF_dir_runtime = '/tera12/yuanhua/data/CoLMruntime/'
@@ -40,7 +40,7 @@
 
  DEF_simulation_time%timestep     = 1800.
 
- DEF_dir_output = '/stu02/yuxr24/CoLM-UBCM-ISA/output/'
+ DEF_dir_output = 'CoLM-UBCM-ISA/output/'
  DEF_USE_WUEST  = .false.
  
  !---- Urban options ----
@@ -105,7 +105,7 @@
  DEF_REST_CompressLevel = 0
  DEF_HIST_CompressLevel = 0
 
- !DEF_hist_vars_namelist = '/home/dongwz/github/master/CoLM202X/run/history.nml'
+ !DEF_hist_vars_namelist = ''
  DEF_hist_vars_out_default = .true.
 
 / 

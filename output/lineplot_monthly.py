@@ -10,19 +10,19 @@ from scipy.stats import gaussian_kde
 
 
 plt.rcParams.update({
-    "font.size": 18,
-    "axes.labelsize": 18,
-    "axes.titlesize": 18,
-    "xtick.labelsize": 19,
-    "ytick.labelsize": 20,
-    "legend.fontsize": 15
+    "font.size": 11,
+    "axes.labelsize": 11,
+    "axes.titlesize": 11,
+    "xtick.labelsize": 12,
+    "ytick.labelsize": 12,
+    "legend.fontsize": 10
 })
 
 # ================================
 # 配置部分
 # ================================
-base_dir = "/stu02/yuxr24/CoLM202X_ISA/output"
-output_dir = "/stu02/yuxr24/CoLM202X_ISA/pictures"
+base_dir = "/stu02/yuxr24/CoLM-UBCM-ISA/output"
+output_dir = "/stu02/yuxr24/CoLM-UBCM-ISA/pictures"
 os.makedirs(output_dir, exist_ok=True)
 
 datasets = {
@@ -191,43 +191,41 @@ for station in stations:
 
 
 # ================================
-# 绘图
+# 绘图: 横向柱状图
 # ================================
-fig, ax = plt.subplots(figsize=(5, 12))
+fig, ax = plt.subplots(figsize=(12, 4))  # 横向图适合拉长宽度
 
 datasets_order = ["SiteData", "GAIA", "GISA", "GISD", "WSF"]
-y = np.arange(len(stations))
-bar_height = 0.15
+x = np.arange(len(stations))
+bar_width = 0.15
 
 for i, dataset in enumerate(datasets_order):
     subset = df_mean[df_mean["Dataset"] == dataset]
-    x_vals = [subset[subset["Station"] == s]["Value"].values[0] if s in subset["Station"].values else 0 for s in stations]
-    ax.barh(y + i * bar_height, x_vals, height=bar_height,
-            label=dataset, color=colors[dataset], edgecolor="none", alpha=0.85)
+    y_vals = [subset[subset["Station"] == s]["Value"].values[0] if s in subset["Station"].values else 0 for s in stations]
+    ax.bar(x + i * bar_width, y_vals, width=bar_width,
+           label=dataset, color=colors[dataset], edgecolor="none", alpha=0.85)
 
 # === 图形美化 ===
-ax.set_yticks(y + 2 * bar_height)
-ax.set_yticklabels(stations, fontsize=20, rotation=45)
-ax.tick_params(axis="x", labelsize=19)
-ax.invert_yaxis()
-ax.set_xlabel(
-    "Canopy Assimilation\nRate(mol m$^{-2}$month$^{-1}$)",
-    fontsize=18
+ax.set_xticks(x + 2 * bar_width)
+ax.set_xticklabels(stations, fontsize=14, rotation=45, ha="right")
+ax.tick_params(axis="y", labelsize=14)
+ax.set_ylabel(
+    "Canopy Assimilation \nRate (mm/month)",
+    fontsize=16
 )
-
 
 ax.legend(
     title="Dataset",
-    fontsize=18,
-    loc="center right",
-    bbox_to_anchor=(1.0, 0.72)
+    fontsize=9,
+    loc="upper right"
 )
-# ax.grid(axis="x", linestyle="--", alpha=0.5)
+# ax.grid(axis="y", linestyle="--", alpha=0.5)
 
 plt.tight_layout()
 
-output_path = os.path.join(output_dir, "f_assim_mean_monthly_comparison_vertical.png")
+output_path = os.path.join(output_dir, "f_assim_mean_monthly_comparison_horizontal.png")
 plt.savefig(output_path, dpi=600)
 plt.close()
-print(f"\n✅ 图像已保存到: {output_path}")
+print(f"\n✅ 横向图像已保存到: {output_path}")
+
 

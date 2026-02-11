@@ -32,8 +32,8 @@ plt.rcParams.update({
 })
 
 
-base_dir = "/stu02/yuxr24/CoLM202X_ISA/output/"
-output_dir = "/stu02/yuxr24/CoLM202X_ISA/pictures/runoff_KDE_allstations"
+base_dir = "/stu02/yuxr24/CoLM-UBCM-ISA/output/"
+output_dir = "/stu02/yuxr24/CoLM-UBCM-ISA/pictures/runoff_KDE_allstations"
 os.makedirs(output_dir, exist_ok=True)
 
 datasets_pattern = {

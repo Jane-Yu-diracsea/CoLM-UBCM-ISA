@@ -3,7 +3,7 @@
  DEF_CASE_NAME = 'PL-Narutowicza_sitedata'
 
  ! surface data from SITE.
- SITE_fsitedata = '/tera12/yuanhua/data/CoLMpointdata/Urban-PLUMBER2/Sitedata/PL-Narutowicza_site_v1.nc'
+ SITE_fsitedata = '/CoLM-UBCM-ISA/impervious_input_nml/Sitedata/PL-Narutowicza_site_v1.nc'
  ! path to surface database
  DEF_dir_rawdata = '/tera12/yuanhua/data/CoLMrawdata/'
  DEF_dir_runtime = '/tera12/yuanhua/data/CoLMruntime/'
@@ -40,7 +40,7 @@
 
  DEF_simulation_time%timestep     = 3600.
 
- DEF_dir_output = '/stu02/yuxr24/CoLM-UBCM-ISA/output/'
+ DEF_dir_output = 'CoLM-UBCM-ISA/output/'
  DEF_USE_WUEST  = .false.
  
  !---- Urban options ----
@@ -94,7 +94,7 @@
  ! ------------------------------
 
  ! ----- forcing -----
- DEF_forcing_namelist = '/home/dongwz/github/master/CoLM202X/run/forcing/PL-Narutowicza.nml'
+ DEF_forcing_namelist = 'CoLM-UBCM-ISA/run/forcing/urban_site/nml/PL-Narutowicza.nml'
 
  ! ----- history -----
  DEF_hist_lon_res = 1.
@@ -105,7 +105,7 @@
  DEF_REST_CompressLevel = 0
  DEF_HIST_CompressLevel = 0
 
- !DEF_hist_vars_namelist = '/home/dongwz/github/master/CoLM202X/run/history.nml'
+ !DEF_hist_vars_namelist = ''
  DEF_hist_vars_out_default = .true.
 
 / 
