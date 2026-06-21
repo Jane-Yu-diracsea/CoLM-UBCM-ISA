@@ -1,3 +1,8 @@
+## Important Note on Numerical Precision
+
+In the Appendix Table A1, values are rounded to three decimal places to reduce table redundancy. All model simulations use higher-precision values (typically four decimal places). This rounding affects presentation only and does not influence the results or conclusions.
+
+
 ## Project Overview
 CoLM-UBCM-ISA is an urban land surface process simulation and analysis project based on the CoLM-UBCM model (The Urban Building Community Model of the Common Land Model).
 This project is designed to process multi-site and multi-source surface data, run urban meteorological simulations, and generate high-resolution output data and visualization results.
